@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="">Bidder's Den</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto ">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="">Home</a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Sort
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" routerLink="low">Sort by low price</a></li>
+              <li><a class="dropdown-item" routerLink="high">Sort by high price</a></li>
+              <li><a class="dropdown-item" routerLink="alphabetic">Sort by Alphabet</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="sell">Sell</a>
+          </li>
+        
+        </ul>
+        <form class="d-flex">
+          <input class="search-box" id="search" type="search" placeholder= "search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <ul class="navbar-nav ml-auto">
+          <!--This is sign in button part-->
+          <li class="nav-item">
+            <button class="nav-button" routerLink="signin" style="width:auto;">Sign in</button>
+          </li>
+          <!-- This is Signup button part -->
+          <li class="nav-item">
+            <button class="nav-button" routerLink="signup" style="width:auto;">Sign Up</button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link-icon" routerLink="">
+              <img src="assets/united-kingdom.png" alt="english" class="nav-icon">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link-icon" routerLink="bangla">
+              <img src="assets/bangladesh.png" alt="bengali" class="nav-icon">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>

@@ -1,0 +1,46 @@
+.carousel-inner{
+    position: relative;
+    background-color: rgb(79, 52, 82);
+}
+.carousel-item{
+    width: 100%;
+    height: 500px;
+    align-content: center;
+}
+.carousel .item img {
+    left: -9999px;  /*important */
+    right: -9999px;  /*important */
+    margin: 0 auto;  /*important */
+    max-width: none;  /*important */
+    min-width: 100%;
+    position: absolute;
+ }
+ .d-block{
+     margin: 0px auto;
+     width: 50%;
+     height: 400px;
+     position: relative;
+ }
+ .carousel-caption{
+     color: rgb(118, 197, 154);
+     margin: -25px auto;
+ }
+ .top-list{
+    width:200px;height:100px;margin:10px 10px;
+    position: relative;
+    
+ }
+ .categories-list{
+    display: inline;
+ }
+ .top-categories-block{
+     width: 64px;
+ }
+ .top-categories-inner{
+    text-align: center;
+    margin: 10px 10px;
+ }
+ .bid-products{
+     height: 200px;
+     width: 100%;
+ }
