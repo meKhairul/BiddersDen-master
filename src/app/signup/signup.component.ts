@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
@@ -10,7 +10,7 @@ import { User } from '../user';;
 })
 export class SignupComponent implements OnInit {
   //angForm:FormGroup
-  constructor(private fb: FormBuilder, private userService: UserService, private route: Router) { 
+  constructor(private fb: FormBuilder, private userService: UserService, private route: Router) {
     /*this.angForm = this.fb.group({
       name:['', Validators.required],
       phone:['', Validators.required],
@@ -21,18 +21,34 @@ export class SignupComponent implements OnInit {
     })
     */
   }
-  user = new User();
-
+  @Input() user:any
+  name!: string;
+  phone_number!:string;
+  email!:string;
+  address!:string;
+  username!: string;
+  password!:string;
+ 
   ngOnInit(): void {
   }
-
+ 
   addUser(){
     console.log("adding User")
-    console.log(this.userService.listUsers())
-    this.userService.addUser(this.user).subscribe(data=>{
-      console.log("added User")
+    var data = {
+      name:this.name,
+      phone_number:this.phone_number,
+      email:this.email,
+      address:this.address,
+      username:this.username,
+      password:this.password
+    }
+    this.userService.addUser(data).subscribe(response=>{
+      alert(response.toString())
       this.route.navigate(['app-home'])
-    })
+    });
     console.log("After adding User")
+    this.userService.getAllUsers().subscribe(response=>{
+      alert(response.toString())
+    });
   }
 }
