@@ -1,54 +1,65 @@
-<form>
-    <div class="form-row">
-      <div class="col-md-4 mb-3">
-        <label for="validationServer01">Product name</label>
-        <input type="text" class="form-control " id="validationServer01" placeholder="Product name" value="" required>
-        
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="validationServer02">Purchasing price</label>
-        <input type="number" class="form-control " id="validationServer02" placeholder="Purchasing price" value="" required>
-        
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="validationServer03">Time used</label>
-        <div class="input-group">
-          
-          <input type="text" class="form-control " id="validationServerUsername" placeholder="time used" aria-describedby="inputGroupPrepend3" required>
-          
-        </div>
-      </div>
-    </div>
+<div class="form-body">
+  <div class="row">
+      <div class="form-holder">
+          <div class="form-content">
+              <div class="form-items">
+                  <h3>Sell your item to us</h3>
+                  <p>Fill in the data below.</p>
+                  <form class="requires-validation" novalidate>
 
-    <div class="col-md-4 mb-3">
-      <label for="validationServer03">Choose Product's Category</label>
-      <div class="input-group">
-        
-       
-        <select id="cars" name="cars">
-          <option value="volvo">Electronics</option>
-          <option value="saab">Foods</option>
-          <option value="fiat">Cloths</option>
-          <option value="audi">Accessories</option>
-        </select>
-        
-      </div>
-    </div>
-  
+                      <div class="col-md-12">
+                         <input class="form-control" type="text" name="product-name" placeholder="Product Name" required>
+                         <div class="valid-feedback">Product name field is valid!</div>
+                         <div class="invalid-feedback">Product name field cannot be blank!</div>
+                      </div>
 
-    <div class="custom-file">
-        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-        <!-- <label class="custom-file-label" for="validatedCustomFile">Choose file...</label> -->
-        
-    </div>
-    <div class="form-group">
-      <div class="form-check">
-        <input class="form-check-input " type="checkbox" value="" id="invalidCheck3" required>
-        <label class="form-check-label" for="invalidCheck3">
-          Agree to terms and conditions
-        </label>
-        
+                      <div class="col-md-12">
+                          <input class="form-control" type="number" name="Base Price" placeholder="Base Price" required>
+                           <div class="valid-feedback">Base Price field is valid!</div>
+                           <div class="invalid-feedback">Base Price field cannot be blank!</div>
+                      </div>
+
+                     <div class="col-md-12">
+                          <select class="form-select mt-3" required>
+                                <option selected disabled value="">Categories</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="cloths">Cloths</option>
+                                <option value="foods">Foods</option>
+                                <option value="accessories">Accessories</option>
+                         </select>
+                          <div class="valid-feedback">You selected a position!</div>
+                          <div class="invalid-feedback">Please select a position!</div>
+                     </div>
+
+
+                     <div class="col-md-12">
+                        <input class="form-control" type="text" name="defects" placeholder="Product defects" required>
+                         <div class="valid-feedback">Product defects field is valid!</div>
+                         <div class="invalid-feedback">Product defects field cannot be blank!</div>
+                     </div>
+
+
+                    <div class="col-md-12 mt-3">
+                      Product Photo:
+                      <input class="form-control" type="file" name="photo" placeholder="Choose File" required>
+                         <div class="valid-feedback">Product photos field is valid!</div>
+                         <div class="invalid-feedback">Product photos field cannot be blank!</div>
+                    </div>
+                    
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label">I confirm that all data are correct</label>
+                   <div class="invalid-feedback">Please confirm that the entered data are all correct!</div>
+                  </div>
+            
+
+                      <div class="form-button mt-3">
+                          <button id="submit" type="submit" class="btn btn-primary">Send</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
       </div>
-    </div>
-    <button class="btn btn-primary" type="submit">Submit form</button>
-  </form>
+  </div>
+</div>
