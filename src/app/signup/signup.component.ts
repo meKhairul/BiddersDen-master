@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
-import { User } from '../user';;
+import { User } from '../user';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -44,11 +44,7 @@ export class SignupComponent implements OnInit {
     }
     this.userService.addUser(data).subscribe(response=>{
       alert(response.toString())
-      this.route.navigate(['app-home'])
-    });
-    console.log("After adding User")
-    this.userService.getAllUsers().subscribe(response=>{
-      alert(response.toString())
+      this.route.navigate(['/sign-in'])
     });
   }
 }

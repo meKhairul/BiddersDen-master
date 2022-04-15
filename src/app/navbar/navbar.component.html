@@ -32,7 +32,11 @@
         <ul class="navbar-nav ml-auto">
           <!--This is sign in button part-->
           <li class="nav-item">
-            <button class="nav-button" routerLink="signin" style="width:auto;">Sign in</button>
+            <button class="nav-button"*ngIf="!authenticated" routerLink="signin" style="width:auto;">Sign in</button>
+          </li>
+           <!-- This is logout button part -->
+          <li class="nav-item">
+            <button class="nav-button"*ngIf="authenticated" routerLink="signin" (click)="logout()" style="width:auto;">Log out</button>
           </li>
           <!-- This is Signup button part -->
           <li class="nav-item">

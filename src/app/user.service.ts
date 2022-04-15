@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http"
 import { Observable } from "rxjs";
+import { Emitters } from "./emiiters/Emitter";
 import { User } from "./user";
 @Injectable({
     providedIn: 'root'
@@ -25,6 +26,14 @@ export class UserService {
         return this.http.post(this.API_URL+'/SaveFile/', val);
     }
     login(val:any){
-        return this.http.get(this.API_URL+'/profile/'+val);
+        return this.http.post(this.API_URL +  '/login/', val, {
+            withCredentials: true
+        });
+    }
+    authenticate(){
+        return this.http.get(this.API_URL + '/user/', {withCredentials: true});
+    }
+    logout(){
+        return this.http.post(this.API_URL + '/logout/', {}, {withCredentials: true})
     }
 }
