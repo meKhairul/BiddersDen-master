@@ -1,6 +1,6 @@
 
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+
+
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -9,7 +9,7 @@ input[type=text], input[type=password] {
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
-  background: #f1f1f1;
+  background: #1f0a0a;
 }
 
 /* Add a background color when the inputs get focus */
@@ -18,24 +18,31 @@ input[type=text]:focus, input[type=password]:focus {
   outline: none;
 }
 .nav-button{
+  width: auto;
+  height: auto;
+  color: #d5e1f8;
   margin: 10px 10px;
   position: relative;
+  background-color: #06060e;
 }
 
-/* Set a style for all buttons */
-button {
-  background-color: #85dce7;
-  color: rgb(0, 0, 0);
-  padding: 14px -5px;
-  margin: 23px 5px;
-  border: none;
-  cursor: pointer;
+div.center-align{
   width: auto;
-  height: 40px;
-  opacity: 0.9;
+  height: auto;
 }
 
-button:hover {
+div.right-align{
+  width: auto;
+  height: auto;
+  margin: 0px 100px;
+}
+
+div.language{
+  width: auto;
+  height: auto;
+  margin: 0px -100px;
+}
+.nav-button:hover {
   opacity:1;
   color: #474e5d;
 }
@@ -53,30 +60,8 @@ button:hover {
 }
 
 /* Add padding to container elements */
-.container {
-  padding: 16px;
-}
 
-/* The Modal (background) */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 312px;
-  top: 10px;
-  width: 511px;
-  height: auto;
-  background-color: #474e5d;
-  padding-top: 34px;
-}
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: -22px 4px; /* 5% from the top, 15% from the bottom and centered */
-  border: 32px solid #888;
-  width: 100%; /* Could be more or less, depending on screen size */
-}
 
 /* Style the horizontal ruler */
 hr {
@@ -116,25 +101,28 @@ hr {
   }
 }
 .navbar-brand{
-  color: crimson;
+  color: rgb(21, 58, 32);
 }
 .search-box{
-  width: 600px;
+  width: 480px;
   height: 40px;
-  margin: 23px;
+  margin: 23px 2px;
 }
 
 .container-fluid{
   height: 50px;
-  background-color: rgba(120, 112, 226, 0.342);
+  background-color: rgba(39, 77, 75, 0.527);
 }
-#search {
-  background-image: "assets/search.png";
-  background-repeat: no-repeat;
-  
-}
+
 .nav-icon{
   width: 25px;
   height: 25px;
   margin: 15px 5px;
+}
+body.h-nav{
+  margin-top: -665px;
+  width: auto;
+  margin-left: 450px;
+  box-sizing: border-box;
+  position: relative;
 }
