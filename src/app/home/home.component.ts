@@ -19,11 +19,11 @@ export class HomeComponent implements OnInit {
   authenticate(){
     this.userService.authenticate().subscribe(response => {
       this.userdata = response
-      alert("Logged In as .. " + String(this.userdata.username) )
+      //alert("Logged In as .. " + String(this.userdata.username) )
       Emitters.authEmitter.emit(true);
     },
     err => {
-      alert("not Logged In")
+      //alert("not Logged In")
       Emitters.authEmitter.emit(false);
     }
   );

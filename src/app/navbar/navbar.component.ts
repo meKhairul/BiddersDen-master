@@ -8,19 +8,9 @@ import { UserService } from '../user.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
-  authenticated = false;
-  
+  constructor() { }
   ngOnInit(): void {
-    Emitters.authEmitter.subscribe(
-      (auth: boolean) => {
-        this.authenticated = auth;
-      }
-    );
-  }
-
-  logout(): void {
-    this.userService.logout().subscribe(() => this.authenticated = false);
+    
   }
 
 }
