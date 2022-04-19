@@ -43,8 +43,8 @@ export class SignupComponent implements OnInit {
       password:this.password
     }
     this.userService.addUser(data).subscribe(response=>{
-      alert(response.toString())
-      this.route.navigate(['/sign-in'])
+      alert(response)
+      this.route.navigate(['signin'])
     });
   }
 }
